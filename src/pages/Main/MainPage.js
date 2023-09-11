@@ -1,5 +1,4 @@
 import React, { createContext, useState } from "react";
-import ReactDOM from 'react-dom/client';
 import Header from "../../components/header/Header";
 import Main from "../../components/main-component/Main";
 import Footer from "../../components/footer/Footer";

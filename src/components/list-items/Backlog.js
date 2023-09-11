@@ -18,11 +18,11 @@ export default function Backlog () {
         inputRef.current.focus();
     };
 
-    const handleDelete=(index)=>(setTaskList(taskList.filter((o, i) => index != i)));
+    const handleDelete=(index)=>(setTaskList(taskList.filter((o, i) => index !== i)));
 
     
     async function handleMove (index){
-      let result=(taskList.filter((o, i) => index == i));
+      let result=(taskList.filter((o, i) => index === i));
       const end =await setMoveTask([...moveTask, result]);
       return handleDelete(index);
    }

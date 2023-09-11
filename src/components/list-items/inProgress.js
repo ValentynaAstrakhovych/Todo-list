@@ -6,10 +6,10 @@ import { TaskMoving } from "../list/List";
 export default function InProgress(){
     const {moveTask2, setMoveTask2, moveTask3, setMoveTask3, date}=useContext(TaskMoving);
     
-    const handleDelete=(index)=>(setMoveTask2(moveTask2.filter((o, i) => index != i)));
+    const handleDelete=(index)=>(setMoveTask2(moveTask2.filter((o, i) => index !== i)));
     
     async function handleMove (index){
-    let result=(moveTask2.filter((o, i) => index == i));
+    let result=(moveTask2.filter((o, i) => index === i));
     const end =await setMoveTask3([...moveTask3, result]);
     return handleDelete(index);
     }

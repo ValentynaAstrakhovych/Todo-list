@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { useContext } from "react";
 import { TaskMoving } from "../list/List";
 
 export default function Ready () {
     const {moveTask, setMoveTask, moveTask2, setMoveTask2, date}=useContext(TaskMoving);
-    const getUniqie = (arr) => arr.filter((el,ind)=>ind === arr.indexOf(el));
-    const resultArr = getUniqie(moveTask.flat());
     
-    const handleDelete=(index)=>(setMoveTask(moveTask.filter((o, i) => index != i)));
+    const handleDelete=(index)=>(setMoveTask(moveTask.filter((o, i) => index !== i)));
     
     async function handleMove (index){
-    let result=(moveTask.filter((o, i) => index == i));
+    let result=(moveTask.filter((o, i) => index === i));
     const end =await setMoveTask2([...moveTask2, result]);
     return handleDelete(index);
     }

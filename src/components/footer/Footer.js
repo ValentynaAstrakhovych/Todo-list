@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { useState} from "react";
 import {NumbersOfTasks, AuthContextd} from "../../pages/Main/MainPage"
 
 export default function Footer() {

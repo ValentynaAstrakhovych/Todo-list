@@ -3,7 +3,6 @@ import Backlog from "../list-items/Backlog"
 import Ready from "../list-items/Ready"
 import InProgress from "../list-items/inProgress"
 import Finished from "../list-items/Finished"
-import { useState } from "react";
 import { createContext } from "react";
 import {useLocalStorage} from "../customHooks/useLocalStorage"
 import {NumbersOfTasks} from "../../pages/Main/MainPage"
@@ -16,7 +15,7 @@ export default function List() {
    const [moveTask3, setMoveTask3]=useLocalStorage("moveTask3",[]);
    const [date,setDate]=useLocalStorage("date","");
 
-   const {active, setActive, finished, setFinished}=useContext(NumbersOfTasks);
+   const {setActive, setFinished}=useContext(NumbersOfTasks);
 
   (function(){
       const activeArr = [...moveTask, ...moveTask2];
