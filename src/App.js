@@ -14,7 +14,6 @@ export default function App() {
       <BrowserRouter>
       <Routes>
         <Route index element={<MainPage />} />
-        <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>
     </div>
